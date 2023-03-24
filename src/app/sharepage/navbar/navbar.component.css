@@ -1,0 +1,41 @@
+.navbar {
+    background-color: #162328;
+    color:#fff;
+}
+.nav-link
+{
+    color: var(--tertiary-color);
+}
+.navbar-light .navbar-nav
+{
+    color: var(--secondary-color);
+}
+.navbar-light .navbar-nav .nav-link.active-link
+{
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+.wallet {
+    background-color:var(--secondary-color);
+    border: none;
+    color: var(--tertiary-color);
+    padding: 6px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 50px;
+    border: 1px solid var(--tertiary-color)
+}
+.wallet:hover {
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
+}
+.wallet > i {
+    margin: 5px;
+}
+.connected-wallet {
+    background-color: var(--primary-color);
+    color: var(--tertiary-color);
+  }
+  
