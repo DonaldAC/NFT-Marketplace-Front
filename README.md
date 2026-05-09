@@ -1,33 +1,60 @@
-# 0xBattleGround
-<p align="center">
-  <a href="http://0xbattleground.com/" target="blank"><img src="./src/assets/img/logo.pn" width="200" alt="0xBattleGroud Logo" /></a>
-</p>
+# NFT Marketplace - Front
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
+A Web3-enabled NFT marketplace frontend built with Angular 12 and Web3.js. Users can browse NFT listings and connect their MetaMask wallet to interact with the platform.
 
-## First Install Packages
-Run `yarn`
+## Tech Stack
 
-## Development server
+- **Framework:** Angular 12.2
+- **Blockchain:** Web3.js 1.8.2 (MetaMask / window.ethereum)
+- **Styling:** Bootstrap 5.1.3, Bootstrap Icons 1.6.1
+- **Package Manager:** Yarn
+- **Testing:** Karma + Jasmine
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Getting Started
 
-## Code scaffolding
+```bash
+# Install dependencies
+yarn
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Start development server (http://localhost:4200)
+yarn start
 
-## Build
+# Production build → dist/cloudkitchenweb/
+yarn build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+# Run unit tests
+yarn test
+```
 
-## Running unit tests
+## Routes
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+| Path | Page |
+|---|---|
+| `/` | Home |
+| `/marketplace` | NFT Marketplace |
+| `/menu` | Menu listing |
+| `/menu/:id` | NFT detail page |
+| `/docs` | Documentation |
+| `/about` | About |
+| `/contact` | Contact |
 
-## Running end-to-end tests
+## Wallet Integration
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+The navbar handles MetaMask connectivity — detecting `window.ethereum`, requesting account access, displaying the truncated wallet address, and reading the account balance. New blockchain features should extend this pattern rather than introducing separate Web3 instances.
 
-## Further help
+## Project Structure
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```
+src/app/
+├── pages/          # Page-level components
+├── sharepage/      # Shared layout (navbar, footer)
+├── services/       # Data services (NFT listings)
+└── environments/   # Dev / prod config
+```
+
+## Generating Components
+
+```bash
+ng generate component pages/my-page
+ng generate service services/my-service
+```
