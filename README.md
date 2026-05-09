@@ -1,6 +1,6 @@
 # 0xBattleGround
 <p align="center">
-  <a href="http://0xbattleground.com/" target="blank"><img src="./src/assets/img/logo.png" width="200" alt="0xBattleGroud Logo" /></a>
+  <a href="http://0xbattleground.com/" target="blank"><img src="./src/assets/img/logo.pn" width="200" alt="0xBattleGroud Logo" /></a>
 </p>
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
